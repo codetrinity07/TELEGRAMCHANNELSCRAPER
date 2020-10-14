@@ -1,3 +1,12 @@
+from telethon import TelegramClient
+from telethon.tl.functions.messages import GetDialogsRequest
+from telethon.tl.types import InputPeerEmpty, InputPeerChannel, InputPeerUser
+from telethon.errors.rpcerrorlist import (PeerFloodError, UserNotMutualContactError ,
+                                          UserPrivacyRestrictedError, UserChannelsTooMuchError,
+                                          UserBotError, InputUserDeactivatedError)
+from telethon.tl.functions.channels import InviteToChannelRequest
+import time, os, sys, json
+
 wt = (
     '''                                                
   [[ye]]*   )                              (        
@@ -8,10 +17,10 @@ wt = (
   [[gr]]| |  / _` || ' \))| || '  \()/ _ \| |/ _` | 
   |_|  \__,_||_||_| |_||_|_|_| \___/|_|\__,_| 
 
-     CODETRINITIY07
+  CODETRINITY07  [[re]][bad_tricks][[ye]] Thanks to my TRINITY
   
   github.com/codetrinity07
-
+  Join Telegram - @bad_tricks
     '''
 )
 COLORS = {
@@ -44,8 +53,8 @@ telet()
 time.sleep(1)
 clear()
 
-if os.path.isfile('codetrinity07.txt'):
-    with open('codetrinity7.txt', 'r') as r:
+if os.path.isfile('erfan4lx_log.txt'):
+    with open('erfan4lx_log.txt', 'r') as r:
         data = r.readlines()
     api_id = data[0]
     api_hash = data[1]
@@ -53,10 +62,10 @@ if os.path.isfile('codetrinity07.txt'):
 else:
     api_id = input('Enter api_id: ')
     api_hash = input('Enter api_hash: ')
-    with open('codetrinity07.txt', 'w') as a:
+    with open('erfan4lx_log.txt', 'w') as a:
         a.write(api_id + '\n' + api_hash)
 
-client = TelegramClient('codetrinity07', api_id, api_hash)
+client = TelegramClient('erfan4lx', api_id, api_hash)
 
 async def main():
     async def getmem():
@@ -76,7 +85,7 @@ async def main():
         my_participants_id = []
         for my_participant in my_participants:
             my_participants_id.append(my_participant.id)
-        with open('trinity_members.txt', 'r') as r:
+        with open('erfan4lx_members.txt', 'r') as r:
             users = json.load(r)
         count = 1
         i = 0
@@ -195,7 +204,7 @@ async def main():
         except ValueError:
             continue
     
-    with open('trinity_members.txt', 'w') as w:
+    with open('erfan4lx_members.txt', 'w') as w:
         json.dump(mem_details, w)
     time.sleep(1)
     print(ye+'Please wait.....')
