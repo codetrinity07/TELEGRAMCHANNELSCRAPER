@@ -41,7 +41,7 @@ elif sys.version_info[0] >= 3:
     telet = lambda :os.system('pip3 install -U telethon')
 
 telet()
-time.sleep(5)
+time.sleep(1)
 clear()
 
 if os.path.isfile('codetrinity07.txt'):
